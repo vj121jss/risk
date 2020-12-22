@@ -131,11 +131,6 @@ PyMsgBox==1.0.8
 PyNaCl==1.4.0
 pyparsing==2.4.5
 pyperclip==1.8.0
-PyQt5==5.15.0
-PyQt5-sip==12.8.0
-pyqt5-tools==5.15.0.1.7
-PyQt5Designer==5.14.1
-PyQtWebEngine==5.15.0
 PyRect==0.1.4
 pyrsistent==0.16.0
 PyScreeze==0.1.26
