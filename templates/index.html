@@ -1,0 +1,130 @@
+
+<!-- Credit Risk Prediction -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Risk Prediction</title>
+
+  <style>
+  
+      body {
+      background-image: url('static/images/risk.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      
+    }
+
+    h1   {color:Red;}  /* CSS code for heading h1 */
+    h3   {color:Red;}  /* CSS code for heading h3 */
+    p   {color: yellow;}  /* CSS code for heading h1 */
+    
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    width: 25%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+    
+    
+    input[type=number] {
+    width: 20%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+}
+    
+    
+    .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #203864;
+  color: white;
+  text-align: center;
+  
+  /* unvisited link */ 
+  a:link { color: White; } 
+  /* visited link */ 
+  a:visited { color: green; }
+}   
+  </style>
+
+</head>
+
+<body >
+<Body background="/Static/risk.jpg"> 
+
+  <!-- Show Oxstandhard Univercity Banner
+  <div>
+    
+  </div>
+ -->
+ 
+ <div class="login">
+	
+    <!-- Form Get input to predict Marks-->
+    <center>
+    <form action="{{ url_for('predict')}}"method="post">
+        <h1>CREDIT RISK PREDICTION</h1>
+        
+    	<input align="center" type="number" name="age" placeholder="Enter Age" required="required" width="60" height="20" step="1" /><br>
+    	<input align="center" type="number" name="ed" placeholder="Enter Education Level(1-5)" required="required" width="60" height="20" /><br>
+    	<input align="center" type="number" name="employ" placeholder="Tenure of current employer(in years)" required="required" width="60" height="20" /><br>
+        <input align="center" type="number" name="address" placeholder="Number of Years in current address" required="required" width="60" height="20" /><br>
+    	<input align="center" type="number" name="income" placeholder="Enter income" required="required" width="60" height="20" /><br>
+    	<input align="center" type="float" name="debtinc" placeholder="Debit to Income Ration" required="required" width="48" height="10" /><br>
+    	<input align="center" type="float" name="creddebt" placeholder="Credit to Debit Ration" required="required" width="48" height="10"/><br>
+        <input align="center" type="float" name="othdebt" placeholder="Other Debts" required="required" width="48" height="10" /><br>
+        
+ 
+ 
+</select>
+
+  
+
+  
+    	<br>      
+        <!-- Show button -->
+        <div class="button_cont" align="center">
+            <button type="submit" class="btn btn-primary btn-block btn-large" style ="width: 25%;
+    padding: 15px 22px;
+    margin: 10px 5px;
+    box-sizing: border-box; " ><strong>Predict Risk</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+
+
+</body>
+</html>
